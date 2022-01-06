@@ -9,6 +9,7 @@ public class LinearSearch {
 		System.out.println("Enter Number To Search: ");
 		int n = scanner.nextInt();
 		System.out.println(linearSort(a, n));
+		scanner.close();
 	}
 
 	private static int linearSort(int[] a, int n) {

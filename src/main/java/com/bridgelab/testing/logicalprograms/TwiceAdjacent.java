@@ -11,6 +11,7 @@ public class TwiceAdjacent {
 			array[i] = scanner.nextInt();
 		}
 		twiceOfAdjacent(array);
+		scanner.close();
 	}
 
 	public static void twiceOfAdjacent(int[] array) {

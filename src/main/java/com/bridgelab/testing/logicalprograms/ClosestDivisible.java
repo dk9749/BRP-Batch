@@ -9,6 +9,7 @@ public class ClosestDivisible {
 		int num = scanner.nextInt();
 		int target = scanner.nextInt();
 		closestDivisible(num, target);
+		scanner.close();
 	}
 
 //Example 1 :
@@ -22,7 +23,6 @@ public class ClosestDivisible {
 //	Output => True
 	public static void closestDivisible(int num, int target) {
 		int number = 0;
-		int[] array = new int[10];
 		if (num % target == 0) {
 			System.out.println("true");
 		} else {

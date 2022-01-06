@@ -10,6 +10,7 @@ public class DivisibleRange {
 		int upper = scanner.nextInt();
 		int num = scanner.nextInt();
 		divisibleRange(lower, upper, num);
+		scanner.close();
 	}
 
 	public static void divisibleRange(int lower, int upper, int num) {

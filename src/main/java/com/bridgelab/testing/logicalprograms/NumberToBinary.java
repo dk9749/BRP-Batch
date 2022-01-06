@@ -8,6 +8,7 @@ public class NumberToBinary {
 		System.out.println("Enter Number: ");
 		int num = scanner.nextInt();
 		binary(num);
+		scanner.close();
 	}
 //	Take an integer number, convert that number into binary and print in output.
 //	(Without using toBinary() or any direct method)

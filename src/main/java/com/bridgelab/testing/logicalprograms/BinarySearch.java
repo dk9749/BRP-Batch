@@ -9,6 +9,7 @@ public class BinarySearch {
 		int n = scanner.nextInt();
 		int[] a = new int[] { 10, 20, 30, 40, 50, 60 };
 		binarySearch(a,n);
+		scanner.close();
 	}
 
 	private static void binarySearch(int[] a, int n) {
