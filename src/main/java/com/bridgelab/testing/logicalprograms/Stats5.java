@@ -1,7 +1,5 @@
 package com.bridgelab.testing.logicalprograms;
 
-import java.util.Arrays;
-
 public class Stats5 {
 	public static void main(String[] args) {
 		stats5();
