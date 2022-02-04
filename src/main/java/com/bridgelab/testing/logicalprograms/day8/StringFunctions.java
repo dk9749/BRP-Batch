@@ -4,17 +4,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class StringFunctions {
+	static Scanner scanner = new Scanner(System.in);
+
 	public static void main(String[] args) {
 		System.out.println(anagram());
+		System.out.println("--------------");
+		System.out.println(palindrome());
 	}
 
 	private static boolean anagram() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter First Word: ");
+		System.out.println("Check Anagram\nEnter First Word: ");
 		String f = scanner.nextLine();
 		System.out.println("Enter Second Word: ");
 		String s = scanner.nextLine();
-		scanner.close();
 		String a = f.replaceAll("\\s", "");
 		String b = s.replaceAll("\\s", "");
 		char[] a1 = a.toLowerCase().toCharArray();
@@ -43,5 +45,18 @@ public class StringFunctions {
 			}
 		}
 		return a1;
+	}
+
+	private static boolean palindrome() {
+		System.out.println("Check Palindrome\nEnter Word: ");
+		String s1 = scanner.next();
+		String s2 = "";
+		for (int i = s1.length() - 1; i >= 0; i--) {
+			s2 += s1.charAt(i);
+		}
+		if (s1.equals(s2)) {
+			return true;
+		}
+		return false;
 	}
 }
