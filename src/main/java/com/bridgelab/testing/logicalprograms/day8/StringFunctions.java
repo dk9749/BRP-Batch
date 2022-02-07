@@ -10,6 +10,8 @@ public class StringFunctions {
 		System.out.println(anagram());
 		System.out.println("--------------");
 		System.out.println(palindrome());
+		System.out.println("--------------\nPermutations:-");
+		permutations();
 	}
 
 	private static boolean anagram() {
@@ -58,5 +60,48 @@ public class StringFunctions {
 			return true;
 		}
 		return false;
+	}
+
+	private static void permutations() {
+		Scanner scanner = new Scanner(System.in);
+		String s = scanner.next();
+		scanner.close();
+		if (s == null || s.length() == 0) {
+			return;
+		}
+		if (s.length() == 1) {
+			System.out.println(s);
+			return;
+		}
+		s = s.toUpperCase();
+		char[] c = s.toCharArray();
+		sort(c);
+		while (true) {
+			System.out.println(String.valueOf(c) + " ");
+			int i = s.length() - 1;
+			while (c[i - 1] >= c[i]) {
+				if (--i == 0) {
+					return;
+				}
+			}
+			int j = s.length() - 1;
+			while (j > i && c[j] <= c[i - 1]) {
+				j--;
+			}
+			swap(c, i - 1, j);
+			reverse(c, i, s.length() - 1);
+		}
+	}
+
+	private static void reverse(char[] c, int i, int j) {
+		while (i < j) {
+			swap(c, i++, j--);
+		}
+	}
+
+	private static void swap(char[] c, int i, int j) {
+		char temp = c[i];
+		c[i] = c[j];
+		c[j] = temp;
 	}
 }
