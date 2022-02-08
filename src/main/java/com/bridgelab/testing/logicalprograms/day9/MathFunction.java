@@ -10,6 +10,7 @@ public class MathFunction {
 		cos();
 		sin();
 		binary();
+		sqrt();
 		scanner.close();
 	}
 
@@ -108,5 +109,16 @@ public class MathFunction {
 		for (int i = count - 1; i >= 0; i--) {
 			System.out.print(array[i]);
 		}
+	}
+
+	private static void sqrt() {
+		System.out.println("Enter Number: ");
+		double c = scanner.nextInt();
+		double t = c;
+		double epsilon = 1e-15;
+		while (Math.abs(t - c / t) > epsilon * t) {
+			t = (c / t + t) / 2;
+		}
+		System.out.println(t);
 	}
 }
