@@ -73,11 +73,10 @@ public class StringFunctions {
 			System.out.println(s);
 			return;
 		}
-		s = s.toUpperCase();
 		char[] c = s.toCharArray();
 		sort(c);
 		while (true) {
-			System.out.println(String.valueOf(c) + " ");
+			System.out.println(String.valueOf(c));
 			int i = s.length() - 1;
 			while (c[i - 1] >= c[i]) {
 				if (--i == 0) {
