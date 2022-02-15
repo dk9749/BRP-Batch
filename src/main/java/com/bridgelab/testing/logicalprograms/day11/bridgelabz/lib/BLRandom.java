@@ -1,4 +1,4 @@
-package com.bridgelabz.lib;
+package com.bridgelab.testing.logicalprograms.day11.bridgelabz.lib;
 
 public class BLRandom {
 	public void setSeed(long seed) {
