@@ -5,34 +5,26 @@ import java.util.Scanner;
 public class UtilScanner {
 	private static final Scanner SCANNER = new Scanner(System.in);
 
-	public static int getInt(String messege, boolean closeScanner) {
+	public static int getInt(String messege) {
 		messege(messege);
-		int i = SCANNER.nextInt();
-		if (closeScanner) {
-			SCANNER.close();
-		}
-		return i;
+		return SCANNER.nextInt();
 	}
 
-	public static double getDouble(String messege, boolean closeScanner) {
+	public static double getDouble(String messege) {
 		messege(messege);
-		double d = SCANNER.nextDouble();
-		if (closeScanner) {
-			SCANNER.close();
-		}
-		return d;
+		return SCANNER.nextDouble();
 	}
 
-	public static String getString(String messege, boolean closeScanner) {
+	public static String getString(String messege) {
 		messege(messege);
-		String s = SCANNER.nextLine();
-		if (closeScanner) {
-			SCANNER.close();
-		}
-		return s;
+		return SCANNER.next();
 	}
 
 	public static void messege(String messege) {
 		System.out.println(messege);
+	}
+
+	public static void closeScanner() {
+		SCANNER.close();
 	}
 }

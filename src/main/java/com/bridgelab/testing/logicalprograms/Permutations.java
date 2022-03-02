@@ -2,7 +2,7 @@ package com.bridgelab.testing.logicalprograms;
 
 public class Permutations {
 	public static void main(String[] args) {
-		String str = UtilScanner.getString("Enter word: ", true);
+		String str = UtilScanner.getString("Enter word: ");
 		System.out.println("All the permutations of the string are: ");
 //		generatePermutation(str, 0, str.length());
 		permutation(str, "");
@@ -26,12 +26,11 @@ public class Permutations {
 		}
 		for (int i = 0; i < s.length(); i++) {
 			char ch = s.charAt(i);
-			String leftSubString = s.substring(0,i);
-			String rightSubString = s.substring(i+1);
-			String rest = leftSubString+rightSubString;
-			permutation(rest, answer+ch);
+			String leftSubString = s.substring(0, i);
+			String rightSubString = s.substring(i + 1);
+			String rest = leftSubString + rightSubString;
+			permutation(rest, answer + ch);
 		}
-
 	}
 
 	private static String swapString(String s, int i, int j) {
