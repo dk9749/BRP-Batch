@@ -34,9 +34,14 @@ public class GetInteger {
 	}
 
 	private static int getInteger(int[] array, int maxValue) {
-		sort(array);
+		int[] temp = new int[array.length + 1];
+		for (int i = 0; i < array.length; i++) {
+			temp[i] = array[i];
+		}
+		temp[array.length] = maxValue + 1;
+		sort(temp);
 		for (int i = 0; i <= maxValue; i++) {
-			if (i != array[i]) {
+			if (i != temp[i]) {
 				return i;
 			}
 		}
