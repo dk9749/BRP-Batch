@@ -1,6 +1,6 @@
 package com.bridgelab.testing.logicalprograms;
 
-//Expression:- 1 - 1/2! - 1/3! - 1/4! ...........-1/n! 
+//Expression: 1 - 1/2! - 1/3! - 1/4! ...........-1/n! 
 //input n = 4
 //output = 0.29133
 public class Factorial {
